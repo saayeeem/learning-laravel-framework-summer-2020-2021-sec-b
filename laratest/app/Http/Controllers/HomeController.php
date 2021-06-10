@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        
+    public function index(Request $req)
+    {
+
+
+
         // $name = 'alamin';
         // $id = '1234';
         // return view('home.index', compact('name', 'id'));
@@ -17,8 +20,12 @@ class HomeController extends Controller
         //         ->with('id', '12')
         //         ->with('name', 'alamin');
 
-        return view('home.index')
-                 ->withId('12')
-                 ->withName('xyz');
+
+        if ($req->session()->has('uname')) {
+            return view('home.index');
+        } else {
+            $req->session()->flash('msg', 'Invalid request');
+            return redirect('/login');
+        }
     }
 }

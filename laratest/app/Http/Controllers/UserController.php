@@ -57,13 +57,16 @@ class UserController extends Controller
         }
     }
 
-    public function destroy(Request $req)
+    public function destroy(Request $req, $id)
     {
+
         $users = $this->getUserList();
+        $user = ['id' => $req->id, 'name' => $req->uname, 'email' => $req->email];
 
         foreach ($users as $u) {
             if ($u['id'] == $req->id) {
-                unset($users['id']);
+                array_push($user);
+                print_r($user);
                 break;
             }
         }

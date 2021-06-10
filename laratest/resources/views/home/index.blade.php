@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <h1>Welcome home, {{$name}} :: {{$id}}</h1>
+    <a href="/home"> Home</a> |
+    <a href="/logout"> Logout </a>
+    {{session('msg')}}
+    <h1>Welcome home, {{session('uname')}}</h1>
     <a href="/user/create"> Create New </a> |
     <a href="/user/list"> User List </a> |
     <a href="/logout"> Logout </a>
