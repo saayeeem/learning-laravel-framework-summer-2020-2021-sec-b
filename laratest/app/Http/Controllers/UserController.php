@@ -65,8 +65,8 @@ class UserController extends Controller
 
         foreach ($users as $u) {
             if ($u['id'] == $req->id) {
-                array_push($user);
-                print_r($user);
+                unset($users[$id - 1]);
+                // array_splice($colors, 1, 1);
                 break;
             }
         }
