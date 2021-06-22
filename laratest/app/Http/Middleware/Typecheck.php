@@ -16,7 +16,7 @@ class Typecheck
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->get('uname') == 'admin') {
+        if ($request->session()->get('uname') == 'sayem') {
 
             return $next($request);
         } else {

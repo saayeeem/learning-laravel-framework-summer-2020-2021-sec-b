@@ -17,7 +17,11 @@
         <table>
             <tr>
                 <td>Username</td>
-                <td><input type="text" name="uname" value="{{$user['name']}}"></td>
+                <td><input type="text" name="username" value="{{$user['username']}}"></td>
+            </tr>
+            <tr>
+                <td>Fullname</td>
+                <td><input type="text" name="name" value="{{$user['name']}}"></td>
             </tr>
 
             <tr>

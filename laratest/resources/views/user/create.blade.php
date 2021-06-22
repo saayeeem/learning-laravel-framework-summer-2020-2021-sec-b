@@ -15,13 +15,14 @@
     <form method="post">
         @csrf
         <table>
-            <tr>
-                <td>ID</td>
-                <td><input type="text" name="id"></td>
-            </tr>
+
             <tr>
                 <td>Username</td>
-                <td><input type="text" name="uname"></td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Full name</td>
+                <td><input type="text" name="name"></td>
             </tr>
             <tr>
                 <td>Password</td>
@@ -30,10 +31,6 @@
             <tr>
                 <td>Email</td>
                 <td><input type="email" name="email"></td>
-            </tr>
-            <tr>
-                <td>Type</td>
-                <td><input type="text" name="type"></td>
             </tr>
             <tr>
                 <td></td>

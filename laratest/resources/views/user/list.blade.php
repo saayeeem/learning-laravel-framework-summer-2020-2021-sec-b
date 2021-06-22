@@ -18,14 +18,15 @@
             <td> ID </td>
             <td> Name </td>
             <td> Email </td>
+            <td> Type </td>
             <td> Action </td>
         </tr>
 
         @foreach ($userList as $user)
         <tr>
-            <td>{{$user->user_id}}</td>
-            <td>{{$user->username}}</td>
-            <td>{{$user->password}}</td>
+            <td>{{$user->id}}</td>
+            <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
             <td>{{$user->type}}</td>
             <td>
                 <a href="{{route('user.details', ['id' => $user['id']])}}"> Details </a> |
