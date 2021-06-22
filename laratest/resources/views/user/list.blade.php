@@ -27,9 +27,9 @@
             <td>{{$user['name']}}</td>
             <td>{{$user['email']}}</td>
             <td>
-                <a href="/user/details/{{$user['id']}}"> Details </a> |
-                <a href="/user/edit/{{$user['id']}}"> Edit </a> |
-                <a href="/user/delete/{{$user['id']}}"> Delete </a> |
+                <a href="{{route('user.details', ['id' => $user['id']])}}"> Details </a> |
+                <a href="{{route('user.edit', ['id' => $user['id']])}}"> Edit </a> |
+                <a href="{{route('user.delete', ['id' => $user['id']])}}"> Delete </a> |
             </td>
         </tr>
         @endforeach

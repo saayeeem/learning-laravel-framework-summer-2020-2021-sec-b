@@ -11,11 +11,12 @@
 <body>
     <a href="/home"> Home</a> |
     <a href="/logout"> Logout </a>
-    {{session('msg')}}
+    <div>{{session('msg')}}</div>
     <h1>Welcome home, {{session('uname')}}</h1>
     <a href="/user/create"> Create New </a> |
-    <a href="/user/list"> User List </a> |
+    <a href="{{route('user.index')}}"> User List </a> |
     <a href="/logout"> Logout </a>
 </body>
+
 
 </html>

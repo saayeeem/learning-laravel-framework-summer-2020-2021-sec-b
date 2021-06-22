@@ -7,9 +7,11 @@
 
 <body>
     <h1>Login</h1>
-    {{session('msg')}}
     <form method="post">
         <table>
+            <!-- @csrf -->
+            <!-- {{csrf_field()}} -->
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
             <tr>
                 <td>Name</td>
                 <td><input type="text" name="uname"></td>
@@ -24,7 +26,7 @@
             </tr>
         </table>
     </form>
-    <a href="/register"> Signup</a>
+    {{session('msg')}}
 </body>
 
 </html>

@@ -13,6 +13,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+    //ei middleware global mane shobar jonno kaj kore
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
@@ -28,6 +29,8 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+
+    //ei middleware binding kora mane ekater jonno shobai check
     protected $middlewareGroups = [
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -52,6 +55,8 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+
+    //era single
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
@@ -62,5 +67,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'sess' => \App\Http\Middleware\SessionVerify::class,
+        'type' => \App\Http\Middleware\Typecheck::class,
+
     ];
 }

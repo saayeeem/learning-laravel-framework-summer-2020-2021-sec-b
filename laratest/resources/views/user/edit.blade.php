@@ -13,6 +13,7 @@
     <h2>Edit User</h2>
 
     <form method="post">
+        @csrf
         <table>
             <tr>
                 <td>Username</td>
