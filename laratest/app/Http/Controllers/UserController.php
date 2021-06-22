@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -11,7 +12,8 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        $users = DB::table('users')->get(); //query builder
+        // $users = User::all();
         // $users = $this->getUserList();
         return view('user.list')->with('userList', $users);
     }

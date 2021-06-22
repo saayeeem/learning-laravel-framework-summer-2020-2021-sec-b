@@ -24,14 +24,20 @@
 
         @foreach ($userList as $user)
         <tr>
+
             <td>{{$user->id}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->type}}</td>
+
+
+
             <td>
-                <a href="{{route('user.details', ['id' => $user['id']])}}"> Details </a> |
-                <a href="{{route('user.edit', ['id' => $user['id']])}}"> Edit </a> |
-                <a href="{{route('user.delete', ['id' => $user['id']])}}"> Delete </a> |
+
+
+                <a href="{{route('user.details', ['id' => $user->id])}}"> Details </a> |
+                <a href="{{route('user.edit', ['id' => $user->id])}}"> Edit </a> |
+                <a href="{{route('user.delete', ['id' => $user->id])}}"> Delete </a> |
             </td>
         </tr>
         @endforeach
