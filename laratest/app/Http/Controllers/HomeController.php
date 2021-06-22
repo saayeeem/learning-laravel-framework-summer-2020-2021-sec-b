@@ -18,8 +18,6 @@ class HomeController extends Controller
         //         ->with('id', '12')
         //         ->with('name', 'alamin');
 
-        return view('home.index')
-            ->withId('12')
-            ->withName('xyz');
+        return view('home.index');
     }
 }
