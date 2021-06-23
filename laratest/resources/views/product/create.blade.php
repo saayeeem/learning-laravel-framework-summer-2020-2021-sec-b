@@ -12,7 +12,7 @@
 
     <h2>Create New User</h2>
 
-    <form method="post" enctype="multipart/form-data">
+    <form method="post">
         @csrf
         <table>
 
@@ -33,19 +33,11 @@
                 <td><input type="email" name="email"></td>
             </tr>
             <tr>
-                <td>Image</td>
-                <td><input type="file" name="image"></td>
-            </tr>
-            <tr>
                 <td></td>
                 <td><input type="submit" name="Submit" value="Add"></td>
-                <td>
-                </td>
             </tr>
         </table>
     </form>
 </body>
-
-
 
 </html>
