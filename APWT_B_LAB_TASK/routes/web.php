@@ -20,9 +20,8 @@ Route::get('/login', ['as' => 'login.index', 'uses' => 'LoginController@index'])
 Route::post('/login', 'LoginController@verify');
 Route::get('/logout', 'LogoutController@index');
 
-Route::get('/register', function () {
-    echo "this is signup page...";
-});
+Route::get('/register', 'RegisterController@create')->name('register.create');
+Route::post('/register', 'RegisterController@register');
 
 
 Route::group(['middleware' => ['sess']], function () {

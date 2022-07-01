@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    // protected $table = 'user_table';
-    // protected $primaryKey = 'user_id'; //if we create name without convention
+    protected $table = 'user_table';
+    protected $primaryKey = 'user_id'; //if we create name without convention
     public $timestamps = false;
 
     //const CREATED_AT = 'create_time';

@@ -6,7 +6,10 @@
 </head>
 
 <body>
+    <h1>Welcome</h1>
+    <a href="{{route('register.create')}}"> Sign Up</a>
     <h1>Login</h1>
+
     <form method="post">
         <table>
             <!-- @csrf -->
